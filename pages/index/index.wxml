@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+  <view style='height:{{navHeight}}px;'>
+    <button class='nv_btn' style='top:{{navTop}}px' plain='true' bindtap="getUserInfo">
+      <image src="./images/svg5.svg" class="image nv_img" mode="scaleToFill"></image>
+    </button>
+    <view class='navbar-title' style='top:{{navTop}}px'>AI文案大师</view>
+  </view>
+  <image src="{{ imgUrl }}" mode="widthFix" class="image_index_bot image" wx:if="{{ init }}"></image>
+  <view wx:if="{{ !init }}" class="image-wrapper" style="width: {{windowWidth}}px;height:{{windowHeight}}px">
+    <image src="{{ imgUrl }}" mode="widthFix" class="image_index_bot2" ></image>
+  </view>
+  <view>
+    <image src="./images/svg6.svg" class="image anni_img" mode="widthFix" animation="{{animation1}}"></image>
+  </view>
+  <view animation="{{animation2}}" class="topinfo">
+    <image src="https://qiniu.cuiqingcai.com/9yktt.gif" class="image b_img" mode="scaleToFill"></image>
+    <view class="block1">
+      <image src="./images/svg3.svg" class="image bcg_img" mode="scaleToFill"></image>
+      <text class="info-text1">{{ infoText1 }}</text>
+    </view>
+    <view class="block2">
+      <image src="./images/svg3.svg" class="image bcg_img2" mode="scaleToFill"></image>
+      <text class="info-text2">{{ infoText2 }}</text>
+    </view>
+  </view>
+  <button class="fuhun_btn btn_1" bindtap="translate" bindtap="upload_pic">
+    {{firstBtnMsg}}
+  </button>
+  <button class="fuhun_btn btn_2" disabled="{{imgUp}}" bindtap="fuhun">
+    {{secondBtnMsg}}
+  </button>
+</view>

@@ -1,0 +1,56 @@
+.navigator {
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  height: 9%;
+  background: #5F458A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 100px #FFFFFF;
+  border-radius: 49px;
+}
+
+.navigator .menu {
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 80%;
+  float: left;
+  top: 10%;
+  position: relative;
+  text-align: center;
+}
+
+.navigator .menu-inner {
+  width: 100%;
+  height: 100%;
+  background: rgba(203, 200, 232, 0.85);
+  box-shadow: 0px 4px 15px rgba(105, 12, 120, 0.22), inset 0px 2px 30px #FFFFFF;
+  border-radius: 49px;
+}
+
+.navigator .menu-inner2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 49px;
+  background: none;
+}
+
+.navigator .menu .avatar {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.navigator .menu .content {
+  color: #4C458C;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}

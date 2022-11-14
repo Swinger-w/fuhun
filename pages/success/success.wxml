@@ -1,0 +1,29 @@
+<!--pages/ground/ground.wxml-->
+<view class="container">
+  <view style='height:{{navHeight}}px'>
+    <button class='nv_btn' style='top:{{navTop}}px' plain='true' bindtap="goA">
+      <image src="./images/svg1.svg" class="image nv_img" mode="scaleToFill"></image>
+    </button>
+    <view class='navbar-title' style='top:{{navTop}}px'>AI文案大师</view>
+  </view>
+  <view>
+    <image src="./images/svg2.svg" mode="widthFix" class="image bg_top"></image>
+    <image src="{{ imgUrl }}" mode="widthFix" style="height:{{ imageHeight}}px;width:{{ imageWidth}}px;top:50%;left:50%;position:absolute;transform: translate(-50%, -50%)" class="background" bindload="imgLoadFunc"></image>
+    <view class="result" style="height:{{ wrapperHeight}}px;width:{{ wrapperWidth}}px;">
+      <view class="info-wrapper">
+        <view class="info">
+          <view class="title" style="color:{{ textColor }}"><image src="./images/svg3.svg" class="icon"></image>布灵评之</view>
+          <view class="content" style="color:{{ textColor }}">{{ des }}</view>
+        </view>
+      </view>
+    </view>    
+    <view>
+      <button class="fuhun_btn btn_1" bindtap="uploadAgain">
+        再次上传
+      </button>
+      <button class="fuhun_btn btn_2" bindtap="getUserInfo">
+        上传星球
+      </button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,83 @@
+<!--pages/ground/ground.wxml-->
+<view class="container ovh" style="width: {{windowWidth}}px;">
+  <view style='height:{{navHeight}}px'>
+    <button class='nv_btn' style='top:{{navTop}}px' plain='true' bindtap="goA">
+      <image src="./images/svg1.svg" class="image nv_img" mode="scaleToFill"></image>
+    </button>
+    <view class='navbar-title' style='top:{{navTop}}px'>AI文案大师</view>
+  </view>
+  <view style="width: {{windowWidth}}px; height: {{windowHeight - navHeight}}px;">
+    <image src="./images/svg2.svg" class="image bg_top" style="top:{{-menuOffset}}px"></image>
+    <view class="top">
+      <view class="myrate" wx:if="{{false}}">
+        <view class="number">{{ rate }}</view>
+        <view class="description">我的等级</view>
+      </view>
+      <view class="profile">
+        <image src="{{ userInfo.avatarUrl || './images/svg3.svg'}}" class="avatar" style="background:white"></image>
+        <view class="name">{{ userInfo.nickName || "布灵"  }}</view>
+        <view class="description"></view>
+      </view>
+      <view class="mylike" wx:if="{{false}}">
+        <view class="number">{{ like }}</view>
+        <view class="description">收到的赞</view>
+      </view>
+    </view>
+    <view class="left-view content-view" wx:for="{{ results[activeIndex - 1] }}" 
+       style="height:{{ wrapperHeightLeft}}px;width:60%;top:{{wrapperTopLeft}}px">
+      <image src="{{ results[activeIndex - 1].filePath}}" 
+      style="height:{{ imageHeightLeft}}px;width:{{ imageWidthLeft}}px;top:50%;left:50%;position:absolute;transform: translate(-50%, -50%)"
+      class="left-view-image view-image" bindtap="toLeft" bindload="imgLoadFuncLeft">
+      </image>
+    </view>
+    <view class="center-text" wx:if="{{!results[activeIndex]}}">
+      你还没有上传任何图片呢～
+    </view>
+    <view class="center-view content-view" style="height:{{ wrapperHeight}}px;width:60%;top:{{wrapperTop}}px" wx:if="{{results[activeIndex]}}">
+      <button style="background-image: url('./images/delete.svg')" class="delete" bindtap="deleteData">
+      </button>
+      <image src="{{ results[activeIndex].filePath}}" 
+      style="height:{{ imageHeight}}px;width:{{ imageWidth}}px;top:50%;left:50%;position:absolute;transform: translate(-50%, -50%)"
+      class="center-view-image view-image" bindload="imgLoadFunc">
+      </image>
+      <view class="info">
+        <view class="title">布灵热评</view>
+        <view class="content">{{ results[activeIndex].des }}</view>
+        <button style="background-image: url('./images/copy.svg')" class="copy" bindtap="copyData">
+        </button>
+      </view>
+      <view class="operation" wx:if="{{false}}">
+        <view class="item">
+          <view class="icon">
+            <button style="background: no-repeat; background-image: url('https://qiniu.cuiqingcai.com/nvyal.svg')" data-index="{{ activeIndex }}" data-type="{{ 1 }}" data-value="{{ results[activeIndex] }}" class="icon-image" bindtap="getUserInfoClick"></button>
+          </view>
+          <text class="icon-text">{{ results[activeIndex].operation.like }}</text>
+        </view>
+        <view class="item">
+          <view class="icon">
+            <button style="background: no-repeat; background-image: url('https://qiniu.cuiqingcai.com/z70o5.svg')" data-index="{{ activeIndex }}" data-type="{{ 2 }}" data-value="{{ results[activeIndex] }}" class="icon-image" bindtap="getUserInfoClick"></button>
+          </view>
+          <text class="icon-text">{{ results[activeIndex].operation.happy }}</text>
+        </view>
+        <view class="item">
+          <view class="icon">
+            <button style="background: no-repeat; background-image: url('https://qiniu.cuiqingcai.com/59n3w.svg')" data-index="{{ activeIndex }}" data-type="{{ 3 }}" data-value="{{ results[activeIndex] }}" class="icon-image" bindtap="getUserInfoClick"></button>
+          </view>
+          <text class="icon-text">{{ results[activeIndex].operation.think }}</text>
+        </view>
+      </view>
+    </view>
+    <view class="right-view content-view" wx:for="{{ results[activeIndex + 1] }}" style="height:{{ wrapperHeightRight}}px;width:60%;top:{{wrapperTopRight}}px">
+      <image src="{{ results[activeIndex + 1].filePath}}" 
+      style="height:{{ imageHeightRight}}px;width:{{ imageWidthRight}}px;top:50%;left:50%;position:absolute;transform: translate(-50%, -50%)"
+      class="right-view-image view-image" bindtap="toRight" bindload="imgLoadFuncRight">
+      </image>
+    </view>
+  </view>
+  <view>
+      <button class="fuhun_btn btn_1" bindtap="uploadAgain">
+        {{ results[activeIndex]? '再次上传': '去上传'}}
+      </button>
+     
+    </view>
+</view>

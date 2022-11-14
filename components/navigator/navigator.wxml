@@ -1,0 +1,28 @@
+<view class="navigator">
+
+
+  <view class="menu" wx:if="{{active == 'ground'}}">
+    <view class="menu-inner">
+      <image src="./images/menu1_active.svg" class="avatar"></image>
+      <text class="content">布灵星球</text>
+    </view>
+  </view>
+  <view class="menu" wx:if="{{active == 'ground'}}">
+    <button class="menu-inner2" data-value="mine" bindtap="getUserInfo">
+      <image src="./images/menu2_blur.svg" class="avatar" data-value="mine"></image>
+    </button>
+  </view>
+  
+  <view class="menu" wx:if="{{active !== 'ground'}}">
+    <button class="menu-inner2" bindtap="jump" data-value="ground">
+      <image src="./images/menu1_blur.svg" class="avatar" bindtap="jump" data-value="ground"></image>
+    </button>
+  </view>
+  <view class="menu" wx:if="{{active !== 'ground'}}">
+    <button class="menu-inner" bindtap="getUserInfo">
+      <image src="./images/menu2_active.svg" class="avatar"></image>
+      <text class="content">个人中心</text>
+    </button>
+  </view>
+
+</view>

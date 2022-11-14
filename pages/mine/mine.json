@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "detail": "../../components/detail/detail",
+    "navigator": "../../components/navigator/navigator"
+  }
+}

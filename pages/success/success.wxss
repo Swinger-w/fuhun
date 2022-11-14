@@ -1,0 +1,145 @@
+/* pages/ground/ground.wxss */
+.bg_top {
+  width: 100%;
+  height: 10%;
+  top: -23%;
+  z-index: 1;
+}
+
+.bg_title {
+  top: 11%;
+  font-size: 20px;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.bg_sm_title {
+  top: 16%;
+  font-size: 12px;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.result {
+  bottom: 10%;
+  width: 70%;
+  position: absolute;
+  height: 50%;
+  overflow: hidden;
+}
+
+/* .result .background {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+} */
+
+.upload-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 67%;
+  z-index: 100;
+  z-index: 1000;
+  /* background-image: url(./images/upload_button.png); */
+  background-repeat: no-repeat;
+  width: 50px !important;
+  height: 50px !important;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.bottom_title {
+  top: 76%;
+  font-size: 20px;
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom_sm_title {
+  top: 81%;
+  font-size: 12px;
+  color: black;
+  width: 100%;
+  text-align: center;
+  /* opacity: 60% !important; */
+}
+
+.bottom_sm_title2 {
+  top: 85%;
+  font-size: 12px;
+  color: #5F458A;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+  /* opacity: 60% !important; */
+}
+
+.fuhun_btn {
+  position: absolute;
+  width: 250rpx !important;
+  bottom: 2%;
+  height: 70rpx !important;
+  border-radius: 80rpx;
+  line-height: 30rpx;
+  letter-spacing: 6rpx;
+  font-size: 30rpx;
+}
+
+.btn_1 {
+  left: 15%;
+  background: #5F458A;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25), inset 0px 4px 30px #FFFFFF;
+  backdrop-filter: blur(4px);
+  /* for adjust */
+}
+
+.btn_2 {
+  right: 15%;
+  color: #4C458A;
+  background: rgba(203, 200, 232, 0.8);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15), inset 0px 4px 20px #FAF2FD;
+  border-radius: 20px;
+}
+
+
+.result .info {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  z-index: 1000;
+  /* background: white; */
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  box-sizing: border-box;
+}
+
+
+.result .info .title {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  /* text-shadow: 0px 0px 2px black; */
+}
+
+.result .info .icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: -12px;
+}
+
+
+.result .info .content {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: white;
+  opacity: 0.8;
+  /* text-shadow: 0px 0px 3px black; */
+}

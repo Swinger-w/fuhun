@@ -1,0 +1,43 @@
+<!--pages/ground/ground.wxml-->
+<view class="container">
+  <view style='height:{{navHeight}}px'>
+    <button class='nv_btn' style='top:{{navTop}}px' plain='true' bindtap="goA">
+      <image src="./images/svg1.svg" class="image nv_img" mode="scaleToFill"></image>
+    </button>
+    <view class='navbar-title' style='top:{{navTop}}px'>AI文案大师</view>
+  </view>
+  <view>
+    <image src="./images/svg2.svg" class="image bg_top" style="top:{{-menuOffset}}px"></image>
+    <image src="./images/bg3.png" class="image bg_top2" style="top:{{-menuOffset2}}px"></image>
+    <view class="top">
+      <view class="myrate" wx:if="{{false}}">
+        <view class="number">{{ rate }}</view>
+        <view class="description">我的等级</view>
+      </view>
+      <view class="profile">
+        <image src="{{ userInfo.avatarUrl }}" class="avatar"></image>
+        <view class="name">{{ userInfo.nickName }}</view>
+        <view class="description">我最爱看别人分享的图片啦</view>
+      </view>
+      <view class="mylike" wx:if="{{false}}">
+        <view class="number">{{ like }}</view>
+        <view class="description">收到的赞</view>
+      </view>
+    </view>
+    <view class="options">
+      <button wx:for="{{ buttons }}" wx:for-index="idx" wx:for-item="item" bindtap="switchActive"
+        data-value="{{ item }}" class="{{ idx === activeButton? 'active option': 'option'}}">
+        {{ item.name }}
+      </button>
+    </view>
+    <scroll-view class="results" bindscrolltolower="loadMore" scroll-y>
+      <view wx:for="{{ results }}" src="" class="result" wx:for-index="idx" wx:for-item="item"
+        style="width:{{previewImageWidthAndHeight}}px;height:{{previewImageWidthAndHeight}}px;">
+        <image src="{{ item.filePath }}" class="preview" bindtap="clickItem" data-item="{{item}}"></image>
+      </view>
+    </scroll-view>
+    <navigator active="mine"></navigator>
+  </view>
+  <detail item="{{ currentDetail }}" wx:if="{{showDetail}}" bindclosedetail="tapDetail" bindoperate="operate"
+    data-value="{{ currentDetail }}"></detail>
+</view>

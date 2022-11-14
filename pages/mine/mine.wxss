@@ -1,0 +1,174 @@
+/* pages/mine/mine.wxss */
+/* pages/ground/ground.wxss */
+.bg_top {
+  width: 100%;
+  height: 10%;
+  top: -42%;
+  height: 100%;
+}
+
+.bg_top2 {
+  width: 100%;
+  height: 10%;
+  top: -42%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg_title {
+  top: 11%;
+  font-size: 24px;
+  color: white;
+  left: 6%;
+}
+
+.bg_sm_title {
+  top: 17%;
+  font-size: 0.001em;
+  color: white;
+  left: 6%;
+  opacity: 0.15;
+}
+
+.space_logo {
+  width: 50px;
+  height: 50px;
+  right: 10%;
+  top: 12%;
+}
+
+.options {
+  background: none;
+  width: 80%;
+  margin: auto;
+  top: 28%;
+  height: 10%;
+  position: absolute;
+  left: 10%;
+}
+
+.options .option {
+  float: left;
+  width: 25%;
+  height: 40px;
+  font-size: 13px;
+  color: white;
+  background: none;
+  padding: 0;
+  padding-top: 10px;
+}
+
+.options .option.active {
+  float: left;
+  width: 25%;
+  font-size: 13px;
+  color: #5F458A;
+  background: none;
+  padding: 0;
+  background: rgba(203, 200, 232, 0.85);
+  box-shadow: 0px 4px 15px rgba(105, 12, 120, 0.22), inset 0px 2px 30px #FFFFFF;
+  border-radius: 49px;
+  padding-top: 10px;
+}
+
+.left-view .left-view-image {
+  position: absolute;
+  left: -25%;
+  height: 60%;
+  width: 40%;
+  top: 35%;
+}
+
+.center-view .center-view-image {
+  position: absolute;
+  left: 15%;
+  height: 50%;
+  width: 70%;
+  top: 40%;
+}
+
+.right-view .right-view-image {
+  position: absolute;
+  right: -25%;
+  height: 60%;
+  width: 40%;
+  top: 35%;
+}
+
+.top {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  height: 20%;
+}
+
+.top .myrate {
+  position: absolute;
+  width: 20%;
+  left: 0;
+  top: 10%;
+  height: 100%;
+  color: white;
+}
+
+.top .profile {
+  width: 40%;
+  left: 30%;
+  position: absolute;
+  text-align: center;
+}
+
+.top .profile .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.top .profile .name {
+  color: white;
+  text-align: center;
+}
+
+.top .profile .description {
+  color: white;
+  text-align: center;
+}
+
+.top .mylike {
+  position: absolute;
+  width: 20%;
+  top: 10%;
+  right: 0;
+  height: 100%;
+  color: white;
+  z-index: 1000;
+}
+
+.top .number {
+  text-align: center;
+}
+
+.top .description {
+  text-align: center;
+  font-size: 10px;
+}
+
+.results {
+  top: 40%;
+  left: 5%;
+  overflow: hidden;
+  width: 90%;
+  position: absolute;
+  height: 50%;
+}
+
+.results .result {
+  float: left;
+  text-align: center;
+}
+
+.results .result .preview {
+  width: 95%;
+  height: 95%;
+  border-radius: 10px;
+}

@@ -1,0 +1,36 @@
+<!--pages/detail.wxml-->
+<view class="detail content-view">
+  <image src="./images/match_soul_title.svg" class="toptitle"></image>
+  <image src="{{item.filePath}}" class="image" mode="widthFix"></image>
+  <image src="./images/close.svg" class="close" bindtap="close"></image>
+  <view class="info">
+    <view class="title">布灵热评</view>
+    <view class="content">{{ item.des }}</view>
+  </view>
+  <view class="operation">
+    <view class="avatar">
+      <image src="{{ item.avatarUrl }}" class="avatar-image"></image>
+    </view>
+    <view class="item">
+      <view class="icon">
+        <image src="./images/like.svg" class="icon-image" bindtap="operate" data-type="{{ 1 }}" data-value="{{ item }}">
+        </image>
+      </view>
+      <text class="icon-text">{{ item.operation.like }}</text>
+    </view>
+    <view class="item">
+      <view class="icon">
+        <image src="./images/happy.svg" class="icon-image" bindtap="operate" data-type="{{ 2 }}"
+          data-value="{{ item }}"></image>
+      </view>
+      <text class="icon-text">{{ item.operation.happy }}</text>
+    </view>
+    <view class="item">
+      <view class="icon">
+        <image src="./images/think.svg" class="icon-image" bindtap="operate" data-type="{{ 3 }}"
+          data-value="{{ item }}"></image>
+      </view>
+      <text class="icon-text">{{ item.operation.think }}</text>
+    </view>
+  </view>
+</view>
